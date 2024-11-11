@@ -10,7 +10,7 @@ FTP_DIRECTORY = "/test/test"
 
 app = FastAPI()
 
-@app.get("/{search_text}")
+@app.get("/ftpsearch/{search_text}")
 async def search_files(search_text: str):
     # FTP接続情報
     ftp = FTP(FTP_HOST)
